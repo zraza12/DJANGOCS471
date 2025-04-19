@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h2>Oldest Student in Each Department</h2>
+<ul>
+  {% for dept_name, student_name in data %}
+    <li>{{ dept_name }} – {{ student_name }}</li>
+  {% empty %}
+    <li>No departments found</li>
+  {% endfor %}
+</ul>
+{% endblock %}

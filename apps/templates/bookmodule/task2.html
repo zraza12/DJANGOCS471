@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h2>Courses and Student Counts</h2>
+<ul>
+  {% for course in courses %}
+    <li>{{ course.title }} ({{ course.code }}) – {{ course.student_count }} students</li>
+  {% empty %}
+    <li>No courses found</li>
+  {% endfor %}
+</ul>
+{% endblock %}
